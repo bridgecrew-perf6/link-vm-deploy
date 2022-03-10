@@ -34,6 +34,7 @@ if [ -f "/usr/bin/docker" ] && [ -f "/usr/bin/docker-compose" ]; then
         docker ps
     else
         echo 'No new updates'
+        sudo docker-compose -f ./without-sip/docker-compose.yml up -d
     fi
 
 else
