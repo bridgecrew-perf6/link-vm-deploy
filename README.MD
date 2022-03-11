@@ -8,11 +8,11 @@ Link start and autoupdate scripts for VM.
 
 ## 2. Copy rc.local and add run permissions
 
-`cp /var/scripts/link-vm-deploy/rc.local /etc/rc.local && chmod +x /etc/rc.local`
+`cp /var/scripts/rc.local /etc/rc.local && chmod +x /etc/rc.local`
 
 ## 3. Add run permissions to all scripts
 
-`chmod -R +x /var/scripts/link-vm-deploy/`
+`chmod -R +x /var/scripts/`
 
 ## 4. Clone Link project
 
@@ -25,6 +25,6 @@ rm -Rf /etc/cloud /var/lib/cloud`
 
 ## 6. Add Link start script to cronjob
 
-`sudo echo '@reboot root /var/scripts/link-vm-deploy/_start.sh >> /var/log/link_startup.log' >> /root/cronjob && crontab /root/cronjob`
+`sudo echo '@reboot root /var/scripts/_start.sh >> /var/log/link_startup.log' >> /root/cronjob && crontab /root/cronjob`
 
 ## 7. After reboot Link will be downloaded and started
