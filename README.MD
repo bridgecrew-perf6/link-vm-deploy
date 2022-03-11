@@ -24,6 +24,6 @@ Link start and autoupdate scripts for VM.
 
 ## 6. Add Link start script to cronjob
 
-`sudo echo '@reboot root /var/scripts/_start.sh >> /var/log/link_startup.log' >> /root/cronjob && crontab /root/cronjob`
+`sudo echo '@reboot root /var/scripts/_start.sh >> /var/log/link_startup.log' >> /root/cronjob && sudo crontab /root/cronjob`
 
 ## 7. After reboot Link will be downloaded and started
